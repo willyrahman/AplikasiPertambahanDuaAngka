@@ -41,14 +41,14 @@ Aplikasi **Pertambahan Dua Angka** adalah aplikasi berbasis Java Swing yang memu
    - Klik tombol "Hitung" untuk melihat hasil penjumlahan.
    - Klik tombol "Hapus" untuk mengosongkan kolom input.
    - Klik tombol "Keluar" untuk menutup aplikasi.
-
 ## Catatan
 - Masukkan hanya angka pada kolom input untuk menghindari pesan error.
 - Aplikasi ini merupakan contoh sederhana yang dapat dikembangkan lebih lanjut.
 
-  ## Pembuat Aplikasi
+## Pembuat Aplikasi
   Willy Rahman 2210010103
 
-  ##Demo
+## Demo
+![Demo GIF](https://github.com/willyrahman/AplikasiPertambahanDuaAngka/blob/main/img/Demo%20Pertambahan%20Dua%20Angka.gif)
   
 
