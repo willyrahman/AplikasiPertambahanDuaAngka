@@ -51,8 +51,40 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
         });
 
         jButton2.setText("Keluar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        txtAngka1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtAngka1FocusGained(evt);
+            }
+        });
+        txtAngka1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAngka1KeyTyped(evt);
+            }
+        });
+
+        txtAngka2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtAngka2FocusGained(evt);
+            }
+        });
+        txtAngka2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAngka2KeyTyped(evt);
+            }
+        });
 
         jButton3.setText("Hapus");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -135,6 +167,61 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Input harus berupa angka!", "Error", JOptionPane.ERROR_MESSAGE);
      }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+          txtAngka1.setText("");
+          txtAngka2.setText("");
+          txtAngka1.requestFocus();
+
+    
+    // Tampilkan pesan konfirmasi
+    JOptionPane.showMessageDialog(this, "Input dan hasil telah dihapus.", "Hapus", JOptionPane.INFORMATION_MESSAGE);
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+           // TODO add your handling code here: // Menampilkan konfirmasi keluar
+    int confirm = JOptionPane.showConfirmDialog(this, "Apakah Anda yakin ingin keluar?", "Konfirmasi Keluar", JOptionPane.YES_NO_OPTION);
+    if (confirm == JOptionPane.YES_OPTION) {
+        System.exit(0); // Keluar dari aplikasi
+    }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtAngka1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAngka1KeyTyped
+        // TODO add your handling code here:
+          // TODO add your handling code here:
+        char c = evt.getKeyChar();
+    
+    // Jika karakter bukan digit (angka), maka hentikan input dan tampilkan pesan error
+    if (!Character.isDigit(c)) {
+        evt.consume(); // Mencegah karakter yang bukan angka masuk ke dalam JTextField
+        JOptionPane.showMessageDialog(this, "Input harus berupa angka!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_txtAngka1KeyTyped
+
+    private void txtAngka2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAngka2KeyTyped
+        // TODO add your handling code here:
+          // TODO add your handling code here:
+        char c = evt.getKeyChar();
+    
+    // Jika karakter bukan digit (angka), maka hentikan input dan tampilkan pesan error
+    if (!Character.isDigit(c)) {
+        evt.consume(); // Mencegah karakter yang bukan angka masuk ke dalam JTextField
+        JOptionPane.showMessageDialog(this, "Input harus berupa angka!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_txtAngka2KeyTyped
+
+    private void txtAngka1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtAngka1FocusGained
+        // TODO add your handling code here:
+        txtAngka1.setText(""); 
+    }//GEN-LAST:event_txtAngka1FocusGained
+
+    private void txtAngka2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtAngka2FocusGained
+        // TODO add your handling code here:
+        txtAngka2.setText(""); 
+    }//GEN-LAST:event_txtAngka2FocusGained
 
     /**
      * @param args the command line arguments
