@@ -39,10 +39,13 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("AplikasiPertambahanDuaAngka"));
+
         jLabel1.setText("Angka 1");
 
         jLabel2.setText("Angka 2");
 
+        jButton1.setBackground(new java.awt.Color(102, 255, 0));
         jButton1.setText("Hitung");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,6 +53,7 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 255, 255));
         jButton2.setText("Keluar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +83,7 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(255, 51, 51));
         jButton3.setText("Hapus");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
